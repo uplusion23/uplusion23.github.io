@@ -1,0 +1,5 @@
+{
+  "title": "This is a title",
+  "body": "this is a body that supports <strong>html</strong>. This might be a bad idea but w/e.",
+  "header": "assets/fonts/Announcement-1.jpg"
+}
