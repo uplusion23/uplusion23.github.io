@@ -17,11 +17,12 @@
         <span class="social-media">
           <a href="https://twitter.com/uplusion23" target="_blank"><ion-icon name="logo-twitter"></ion-icon> Twitter</a>
           <a href="https://github.com/uplusion23/" target="_blank"><ion-icon name="logo-github"></ion-icon> GitHub</a>
-          <a href="https://steamcommunity.com/id/uplusion23" target="_blank"><ion-icon name="logo-steam"></ion-icon> Steam</a>
+          <a href="mailto:uplusion23@gmail.com" target="_blank"><ion-icon name="mail"></ion-icon> Email</a>
         </span>
       </div>
       <div class="posts">
         <h1>Programs</h1>
+        <div class='icon-scroll'></div>
         <div class="list">
           <div class="post wide" style="background-image: url(assets/img/Apex-Library.jpg)" data-link="https://github.com/uplusion23/Apex-Library">
             <span class="description">
@@ -54,25 +55,16 @@
       </div>
       <div class="posts">
         <h1>Updates</h1>
-        <div class="list">
-          <div class="post" style="background-image: url(assets/img/Announcement-1.jpg)">
-            <span class="description">
-              <span class="category">Announcement</span>
-              It's been 5 years since I've last updated my website, it's about time I start working on it again.
-            </span>
-            <span class="title">
-              <span>New Portfolio</span>
-            </span>
-          </div>
-        </div>
+        <div class='icon-scroll'></div>
+        <div class="list" data-list="updates"></div>
       </div>
     </div>
     <div class="post-popup">
       <div class="dialog">
-        <span class="close"></span>
-        <h1>This would be a title</h1>
-        <div class="header"></div>
-        <div class="body">
+        <span class="close" data-dialog="close"><ion-icon name="close"></ion-icon></span>
+        <h1 data-postinfo="title">This would be a title</h1>
+        <div class="header" data-postinfo="header"></div>
+        <div class="body" data-postinfo="body">
           this will be the body text. it keeps on going so we can test new lines and new paragraphs of content to populate
         </div>
       </div>

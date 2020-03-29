@@ -1,5 +1,6 @@
 {
-  "title": "This is a title",
-  "body": "this is a body that supports <strong>html</strong>. This might be a bad idea but w/e.",
-  "header": "assets/fonts/Announcement-1.jpg"
+  "title": "Website Update",
+  "smallDescription": "It's been 5 years since I've last updated my website, it's about time I start working on it again.",
+  "body": "<p>It's been five years since I've published any sort of front-end change to my personal website. Since then I've done a few personal projects, but I've been focused too much on work. Now that things have calmed down a bit, I've got time to work more on my hobbies.</p><p>As you can see there is a lot of work to be done here, such as mobile versioning and better screen-scaling for different resoltions, but I'm getting there. The post system is relying on Ajax, and simple JSON files for now, since I'm using GitHub pages. I'll see later in the future about moving to Jekyll, but for now this seems to be comfortable. I'll definitely need a lot of work on the design and style, but my design skills are not as decent as my ability to program.</p><p>I do not have an exact idea what all I'll be posting here, but it could be anything at this point. Maybe some snippets about games I'm playing, or some projects I've been working on. I'll let time prove to show me everything that I'll be doing with this. In the meantime, check out some of my projects I've started on the left!</p><br><br><span>PS: There will never be ads on this page. I don't like to see them, why would you?</span><span class=\"credits\">Photo credit: <a href=\"https://unsplash.com/@pawel_czerwinski\" target=\"_blank\">@pawel_czerwinski</a>.</span>",
+  "header": "assets/img/posts/Announcement-1.jpg"
 }
