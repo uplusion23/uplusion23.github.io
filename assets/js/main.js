@@ -30,7 +30,7 @@ $('[data-dialog]').on('click', function() {
 
 $(document).ready(() => {
   $.ajax({
-    url: 'posts/_main.json',
+    url: 'posts/main.json',
     type: 'GET',
     dataType: 'json',
     success: function(data) {
