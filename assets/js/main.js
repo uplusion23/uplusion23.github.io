@@ -7,25 +7,38 @@ $('[data-link]').on('click', function() {
   window.open(link);
 });
 
-$('body').on('click', '[data-post]', function() {
-  let postID = $(this).data('post');
-  let postData = global.posts[postID + '.json'];
-  $('[data-postinfo="title"]').text(postData.title);
-  $('[data-postinfo="header"]').css({
-    "background-image": "url('" + postData.header + "')"
-  });
-  $('[data-postinfo="body"]').html(postData.body);
-  $('.post-popup').addClass('active');
-});
-
 $('[data-dialog]').on('click', function() {
   let action = $(this).data('dialog');
   let dialog = $('.post-popup');
   switch (action) {
     case "close":
       dialog.removeClass('active');
+      $('[data-postinfo="body"]').empty();
       break;
   }
+});
+
+$('.container').scroll(function () {
+  if ($(this).scrollTop() >= 40) {
+    $('body').addClass('scroll');
+  }
+  if ($(this).scrollTop() < 40) {
+    $('body').removeClass('scroll');
+  }
+});
+
+$('body').on('click', '[data-post]', function() {
+  let postID = $(this).data('post');
+  let postData = global.posts[postID + '.json'];
+  $('[data-postinfo="title"]').text(postData.title);
+  $('[data-postinfo="date"]').text(convertDate(postData.date));
+  $('[data-postinfo="category"]').text(postData.category);
+  $('[data-postinfo="description"]').text(postData.smallDescription);
+  $('[data-postinfo="header"]').css({
+    "background-image": "url('" + postData.header + "')"
+  });
+  $('[data-postinfo="body"]').html('<a class="image" style="background-image: url(' + postData.header + ');" href="' + postData.header + '"></a>' + postData.body);
+  $('.post-popup').addClass('active');
 });
 
 $(document).ready(() => {
@@ -82,7 +95,7 @@ const convertDate = (timestamp) => {
   let minute = date.getMinutes();
   let today = ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '/' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' + date.getFullYear();
   let dateTime = `${today} - ${hour12}:${minute} ${pm ? 'PM' : 'AM'}`
-  console.log(dateTime);
+  return dateTime;
 }
 
 // new Date().getTime();

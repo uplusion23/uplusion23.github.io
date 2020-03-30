@@ -1,4 +1,15 @@
 <!DOCTYPE Html>
+<!--
+
+TODO:
+    * Fix SVG for logo. Stroke offset and dash. Warp/recover periodically.
+
+ROADMAP:
+    * Post Creator [Most likely offline, or a simple page to generate JSON]
+    * Post Editor [It'd have to be offline unless I move to something like firebase]
+    * Some sort of markup/down formatting.
+
+-->
 <html>
   <head>
     <meta charset="utf-8">
@@ -8,6 +19,31 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
   <body>
+    <div class="nav">
+      <a class="logo" href="#">
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="143 113 395 455" width="390" height="450">
+          <defs>
+            <path d="M242.5 115L242.5 430L291.25 475L388.75 475L437.5 430L437.5 340L535 340L535 475L437.5 565L242.5 565L145 475L145 115L242.5 115Z" id="a1LLCgUfSL"></path>
+            <path d="M437.5 115L535 115L535 295L437.5 295L437.5 115Z" id="e1tQCe29hj"></path>
+          </defs>
+          <g>
+            <g>
+              <g>
+                <use xlink:href="#a1LLCgUfSL" opacity="1" fill-opacity="0" stroke="#ffffff" stroke-width="20" stroke-opacity="1"></use>
+              </g>
+            </g>
+            <g>
+              <g>
+                <use xlink:href="#e1tQCe29hj" opacity="1" fill-opacity="0" stroke="#ffffff" stroke-width="20" stroke-opacity="1"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </a>
+      <a class="menu" href="#"><ion-icon name="menu"></ion-icon></a>
+    </div>
     <div class="container">
       <div class="intro">
         <h1>Hello, I'm <span>Trevor McIntire</span></h1>
@@ -59,13 +95,21 @@
         <div class="list" data-list="updates"></div>
       </div>
     </div>
-    <div class="post-popup">
+    <div class="post-popup active">
       <div class="dialog">
         <span class="close" data-dialog="close"><ion-icon name="close"></ion-icon></span>
-        <h1 data-postinfo="title">This would be a title</h1>
-        <div class="header" data-postinfo="header"></div>
+        <div class="head">
+          <div class="before" data-postinfo="header"></div>
+          <div class="category">
+            <span data-postinfo="category">category</span>
+          </div>
+          <span class="date" data-postinfo="date">{date}</span>
+          <h1 data-postinfo="title">{title}</h1>
+          <span class="description" data-postinfo="description">{description}</span>
+        </div>
         <div class="body" data-postinfo="body">
-          this will be the body text. it keeps on going so we can test new lines and new paragraphs of content to populate
+          <a class="image" data-postinfo="header" href="#"></a>
+          {body}
         </div>
       </div>
     </div>
