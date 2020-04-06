@@ -1,0 +1,35 @@
+{
+  "uid": "PmmM60lM5RS6vuDZDwLb7MrttFi2",
+  "displayName": "Trevor McIntire",
+  "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjCyOA4_KgHOTLuLFySYGsfxePkWDpjoVE7PJbP3g",
+  "email": "uplusion23@gmail.com",
+  "emailVerified": true,
+  "phoneNumber": null,
+  "isAnonymous": false,
+  "tenantId": null,
+  "providerData": [
+    {
+      "uid": "102443040758463123320",
+      "displayName": "Trevor McIntire",
+      "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GjCyOA4_KgHOTLuLFySYGsfxePkWDpjoVE7PJbP3g",
+      "email": "uplusion23@gmail.com",
+      "phoneNumber": null,
+      "providerId": "google.com"
+    }
+  ],
+  "apiKey": "AIzaSyA2gakifF2n-6mqov6Z-FqnH7WMuWAFcOA",
+  "appName": "[DEFAULT]",
+  "authDomain": "uplusion23-blog.firebaseapp.com",
+  "stsTokenManager": {
+    "apiKey": "AIzaSyA2gakifF2n-6mqov6Z-FqnH7WMuWAFcOA",
+    "refreshToken": "AE0u-NdJAfp89v74nKcpWIhZp9UU4RKAc5eFhzNnBxdZpSB-4QaWmRwhAHxIaLgzjae3Cye7d6qj5Gr3Hgcj82HbJf5-xXvq7BpR3wcRIFoJSaX2tYqFeFN_fkWyRKlBlt44rp9fcLuTk6rblcCj6AlwpZjKj_HmZ_hUtwD6Qn81t14DHiewbdtHXxenNpkseHP1eqypQyRcSiiumkAp81AShD6XCDjCtl2XWtQUoI-LzK95-QbL92Xpo9AEZd-ByhRvCXSI2wMgcPzKTXH7zVWOW_0BRc0hrkFb-Tha65FmagolZLm4HHbJKbJdRTRwpPKNIA7EknslRio3y6cKB3f28JPuUn0wwLCd4N5J5JIvBz0eeWjyokDWY0ScPMvbULA_7iDxjfUTcW8CLm95O_g5rhw3OLUDbHt0tQC0jMF41EWMKbZE1vM",
+    "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjgzYTczOGUyMWI5MWNlMjRmNDM0ODBmZTZmZWU0MjU4Yzg0ZGI0YzUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVHJldm9yIE1jSW50aXJlIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdqQ3lPQTRfS2dIT1RMdUxGeVNZR3NmeGVQa1dEcGpvVkU3UEpiUDNnIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL3VwbHVzaW9uMjMtYmxvZyIsImF1ZCI6InVwbHVzaW9uMjMtYmxvZyIsImF1dGhfdGltZSI6MTU4NTg4ODgwMCwidXNlcl9pZCI6IlBtbU02MGxNNVJTNnZ1RFpEd0xiN01ydHRGaTIiLCJzdWIiOiJQbW1NNjBsTTVSUzZ2dURaRHdMYjdNcnR0RmkyIiwiaWF0IjoxNTg1ODg4ODAwLCJleHAiOjE1ODU4OTI0MDAsImVtYWlsIjoidXBsdXNpb24yM0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjEwMjQ0MzA0MDc1ODQ2MzEyMzMyMCJdLCJlbWFpbCI6WyJ1cGx1c2lvbjIzQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.lxGYTdGDSFHS4A5Lu1jiUANAmE1XNR0PPx3ISIddk3HWzF3XQCZnqLSvTrZ6ryNcxrevVfmAZriABi79OG0qq7zCAylrzBqqs8txeYpZHL5QIMcIopwvx0WeXCNrBIEWPAd4FK9H8Vs06frAnA7M_J7B2NycM3zWlT5uCpUP28syTHboGHsIo-DSNu9ArlLT5UYwtVHoHQCaabWL0o8bULsvjqek5oJetdiytVLwgXVvN8BCH629Z2ayo3ibASg7EiKGW9H3B5kMUNCDGWoUZQeOhBOJC-C9GIE7YheHsylX99PV1yn7u-iBImxWjv49hPFpUFQgFoBRwZNhpvKnbQ",
+    "expirationTime": 1585892400000
+  },
+  "redirectEventId": null,
+  "lastLoginAt": "1585888800719",
+  "createdAt": "1585888800718",
+  "multiFactor": {
+    "enrolledFactors": []
+  }
+}

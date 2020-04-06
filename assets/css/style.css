@@ -5,6 +5,51 @@
  font-style: normal;
 }
 
+:root {
+  --background: #151515;
+  --background-accent: #202022;
+  --color: #FAFAFA;
+  --color-secondary: #9E9E9E;
+  --color-accent: #FAFAFA;
+  --color-accent-secondary: #CCC;
+  --list-gradient: linear-gradient(0deg, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 10%, rgba(21,21,21,0) 100%);
+  --text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);
+  --post-background: rgba(32,32,34,0.7);
+  --post-background-hover: rgba(32,32,34,1);
+}
+
+:root.theme-blue {
+  --background: #151515;
+  --background-accent: #202022;
+  --color: #FAFAFA;
+  --color-secondary: #9E9E9E;
+  --color-accent: #007ACC;
+  --color-accent-secondary: #09819C;
+  --list-gradient: linear-gradient(0deg, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 10%, rgba(21,21,21,0) 100%);
+  --text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);
+  --post-background: rgba(32,32,34,0.7);
+  --post-background-hover: rgba(32,32,34,1);
+}
+
+:root.theme-day {
+  /* Again, why..? */
+  --background: #FAFAFA;
+  --background-accent: #EEE;
+  --color: #212121;
+  --color-secondary: #444;
+  --color-accent: #007ACC;
+  --color-accent-secondary: #09819C;
+  --list-gradient: linear-gradient(0deg, rgba(245,245,245,1) 0%, rgba(245,245,245,0) 10%, rgba(245,245,245,0) 100%);
+  --text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.1);
+  --post-background: rgba(240,240,225,0.7);
+  --post-background-hover: rgba(240,240,225,1);
+}
+
+::selection {
+  color: var(--background);
+  background: var(--color);
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -24,7 +69,7 @@
 }
 
 html {
-  background-color: #151515;
+  background-color: var(--background);
   scroll-behavior: smooth;
   font-size: 16px;
 }
@@ -58,7 +103,7 @@ html, body {
 }
 
 body.scroll .nav {
-  background: #151515;
+  background: var(--background);
 }
 
 .nav .logo {
@@ -90,7 +135,7 @@ body.scroll .nav {
   height: 10vh;
   line-height: 10vh;
   font-size: 1.6rem;
-  color: #FAFAFA;
+  color: var(--color);
   text-align: center;
   text-decoration: none;
 }
@@ -132,7 +177,7 @@ body.scroll .nav {
   padding: 0;
   font-weight: 550;
   font-size: 2.5rem;
-  color: #FAFAFA;
+  color: var(--color);
 }
 
 .container > .intro > h1 span {
@@ -144,7 +189,7 @@ body.scroll .nav {
   position: relative;
   width: 100%;
   height: auto;
-  color: #9E9E9E;
+  color: var(--color-secondary);
   font-size: 1rem;
 }
 
@@ -166,7 +211,7 @@ body.scroll .nav {
 
 .container > .intro .social-media a {
   display: inline-block;
-  color: #FAFAFA;
+  color: var(--color);
   height: 3vh;
   font-size: 1rem;
   font-weight: 550;
@@ -198,7 +243,7 @@ body.scroll .nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgba(21,21,21,1) 0%, rgba(21,21,21,0) 10%, rgba(21,21,21,0) 100%);
+  background: var(--list-gradient);
 }
 
 .container > .posts h1 {
@@ -213,7 +258,7 @@ body.scroll .nav {
   font-weight: 250;
   line-height: 5vh;
   text-align: center;
-  color: #EEE;
+  color: var(--color-secondary);
 }
 
 .container > .posts .list {
@@ -237,8 +282,8 @@ body.scroll .nav {
   position: relative;
   width: calc(50% - 0.5vh);
   height: 40vh;
-  background-color: #202022;
-  color: #FAFAFA;
+  background-color: var(--background-accent);
+  color: var(--color);
   margin: 0 0 1vh 0;
   box-sizing: border-box;
   cursor: pointer;
@@ -258,8 +303,8 @@ body.scroll .nav {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background-color: rgba(32,32,34,0.7);
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);
+  background-color: var(--post-background);
+  text-shadow: var(--text-shadow);
 
   transition: all 0.2s ease;
 }
@@ -273,12 +318,12 @@ body.scroll .nav {
   transform: translateY(-50%);
   width: 3px;
   height: 0px;
-  background: #FAFAFA;
+  background: var(--color);
   transition: all 0.2s ease;
 }
 
 .container > .posts .list .post:hover::before {
-  background-color: rgba(32,32,34,1);
+  background-color: var(--post-background-hover);
 }
 
 .container > .posts .list .post:hover::after {
@@ -301,17 +346,17 @@ body.scroll .nav {
   box-sizing: border-box;
   margin: 0;
   padding-right: 2vh;
-  color: #AAA;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);
+  color: var(--color-secondary);
+  text-shadow: var(--text-shadow);
 }
 
 .container > .posts .list .post > .description .category {
   display: block;
-  color: #FAFAFA;
+  color: var(--color);
   text-transform: uppercase;
   font-weight: 650;
   font-size: 0.9rem;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);
+  text-shadow: var(--text-shadow);
 }
 
 .container > .posts .list .post > .title {
@@ -323,7 +368,7 @@ body.scroll .nav {
   height: 50%;
   line-height: 7vh;
   font-size: 1.4rem;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);
+  text-shadow: var(--text-shadow);
   box-sizing: border-box;
   margin: 0;
   padding-right: 2vh;
@@ -381,7 +426,7 @@ body.scroll-remove .container > .posts > .icon-scroll {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(32,32,34,0.7);
+  background: var(--post-background);
   cursor: pointer;
   z-index: 9;
 
@@ -407,10 +452,10 @@ body.scroll-remove .container > .posts > .icon-scroll {
   overflow-x: hidden;
   overflow-y: auto;
   transform: translateX(-50%) translateY(-60%);
-  background-color: #202022;
+  background-color: var(--background-accent);
   cursor: default;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
-  color: #9E9E9E;
+  color: var(--color-secondary);
 
   transition: all 0.2s ease;
 }
@@ -488,8 +533,8 @@ body.scroll-remove .container > .posts > .icon-scroll {
   font-weight: 1000;
   border-radius: 20px;
   text-transform: uppercase;
-  background: #FAFAFA;
-  color: #212121;
+  background: var(--color-accent);
+  color: var(--background-accent);
 }
 
 .post-popup > .dialog > .head .date {
@@ -500,7 +545,7 @@ body.scroll-remove .container > .posts > .icon-scroll {
   line-height: 4vh;
   font-size: 0.9rem;
   font-weight: 300;
-  color: #CECECE;
+  color: var(--color-secondary);
   margin: 0 0 1vh 0;
   text-align: center;
 }
@@ -513,13 +558,13 @@ body.scroll-remove .container > .posts > .icon-scroll {
   line-height: 10vh;
   font-size: 2rem;
   font-weight: 350;
-  color: #FAFAFA;
+  color: var(--color);
   margin: 1vh 0 4vh 0;
   text-align: center;
 }
 
 .post-popup > .dialog > .head .description {
-  color: #FAFAFA;
+  color: var(--color);
   font-size: 0.8rem;
 }
 
@@ -539,7 +584,7 @@ body.scroll-remove .container > .posts > .icon-scroll {
 /* Situational styles for custom messages and formatting. */
 .post-popup > .dialog .body a {
   text-decoration: none;
-  color: #FAFAFA;
+  color: var(--color);
 }
 
 .post-popup > .dialog .body .image {
@@ -557,10 +602,35 @@ body.scroll-remove .container > .posts > .icon-scroll {
   transition: all 0.2s ease;
 }
 
+.post-popup > .dialog .body h1 {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1.8rem;
+  margin: 4rem 0 0.4rem 0;
+  padding: 0;
+  color: var(--color-accent);
+  text-indent: 0;
+}
+
+.post-popup > .dialog .body h2 {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  color: var(--color-accent-secondary);
+  text-indent: 0;
+  font-weight: 500;
+}
+
 .post-popup > .dialog .body span.credits {
   display: block;
   text-indent: 0;
-  color: #AEAEAE;
+  color: var(--color-secondary);
   font-size: 2vh; /* Fix later */
   margin-top: 2vh;
 }
@@ -640,7 +710,7 @@ body.scroll-remove .container > .posts > .icon-scroll {
 
   .container > .posts .list .post > .description .category {
     display: block;
-    color: #FAFAFA;
+    color: var(--color);
     text-transform: uppercase;
     font-weight: 650;
     font-size: 1.6vh
