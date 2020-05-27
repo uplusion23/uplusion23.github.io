@@ -14,7 +14,7 @@ const database = firebase.firestore();
 const provider = new firebase.auth.GoogleAuthProvider();
 
 function getPosts() {
-  database.collection('posts').get().then((snapshot) => {
+  database.collection('posts').orderBy('date', 'desc').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
       // This is where we load the data.
       console.log(doc.data())
