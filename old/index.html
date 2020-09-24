@@ -1,0 +1,125 @@
+<!DOCTYPE Html>
+<!--
+
+TODO:
+    * Fix SVG for logo. Stroke offset and dash. Warp/recover periodically.
+
+ROADMAP:
+    * Post Creator [Most likely offline, or a simple page to generate JSON]
+    * Post Editor [It'd have to be offline unless I move to something like firebase]
+    * Some sort of markup/down formatting.
+
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="uplusion23 (Trevor McIntire)">
+    <meta name="description" content="Personal portfolio and misc website for uplusion23 (Trevor McIntire)">
+    <title>uplusion23</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <a class="logo" href="#">
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="143 113 395 455" width="390" height="450">
+          <defs>
+            <path d="M242.5 115L242.5 430L291.25 475L388.75 475L437.5 430L437.5 340L535 340L535 475L437.5 565L242.5 565L145 475L145 115L242.5 115Z" id="a1LLCgUfSL"></path>
+            <path d="M437.5 115L535 115L535 295L437.5 295L437.5 115Z" id="e1tQCe29hj"></path>
+          </defs>
+          <g>
+            <g>
+              <g>
+                <use xlink:href="#a1LLCgUfSL" opacity="1" fill-opacity="0" stroke="#ffffff" stroke-width="20" stroke-opacity="1"></use>
+              </g>
+            </g>
+            <g>
+              <g>
+                <use xlink:href="#e1tQCe29hj" opacity="1" fill-opacity="0" stroke="#ffffff" stroke-width="20" stroke-opacity="1"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </a>
+      <a class="menu" href="#"><ion-icon name="menu"></ion-icon></a>
+    </div>
+    <div class="container">
+      <div class="intro">
+        <h1>Hello, I'm <span>Trevor McIntire</span></h1>
+        <p class="bio">
+          Web and Software developer working in the Information Technology field for the U.S. DoD who is constantly searching to expand my knowledge. I primarily develop in NodeJS and web-based languages such as CSS/JavaScript for both work and hobby. I started programming at the age of 14, when my love for gaming met my love for modding. Check out my posts, or look around at a few of my personal projects.
+        </p>
+        <span class="social-media">
+          <a href="https://twitter.com/uplusion23" target="_blank"><ion-icon name="logo-twitter"></ion-icon> Twitter</a>
+          <a href="https://github.com/uplusion23/" target="_blank"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+          <a href="mailto:uplusion23@gmail.com" target="_blank"><ion-icon name="mail"></ion-icon> Email</a>
+        </span>
+      </div>
+      <div class="posts">
+        <h1>Programs</h1>
+        <div class='icon-scroll'></div>
+        <div class="list">
+          <div class="post wide" style="background-image: url(assets/img/Apex-Library.jpg)" data-link="https://github.com/uplusion23/Apex-Library">
+            <span class="description">
+              <span class="category">Software</span>
+              An open-source PC game consolidator. Takes your libraries from multiple clients and mergest them.
+            </span>
+            <span class="title">
+              <span>Apex Library</span>
+            </span>
+          </div>
+          <div class="post" style="background-image: url(assets/img/Sentinel.png)" data-link="https://github.com/uplusion23/Sentinel">
+            <span class="description">
+              <span class="category">Software</span>
+              An open-source Dungeons & Dragons "All-In-One" client.
+            </span>
+            <span class="title">
+              <span>Sentinel</span>
+            </span>
+          </div>
+          <div class="post" style="background-image: url(assets/img/Music-App.png)" data-link="https://github.com/uplusion23/music-app">
+            <span class="description">
+              <span class="category">Software</span>
+              An incomplete music application running on NW.JS. The project was discontinued.
+            </span>
+            <span class="title">
+              <span>Unnamed Music Application</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="posts">
+        <h1>Updates</h1>
+        <div class='icon-scroll'></div>
+        <div class="list" data-list="updates"></div>
+      </div>
+    </div>
+    <div class="post-popup">
+      <div class="dialog">
+        <span class="close" data-dialog="close"><ion-icon name="close"></ion-icon></span>
+        <div class="head">
+          <div class="before" data-postinfo="header"></div>
+          <div class="category">
+            <span data-postinfo="category">category</span>
+          </div>
+          <span class="date" data-postinfo="date">{date}</span>
+          <h1 data-postinfo="title">{title}</h1>
+          <span class="description" data-postinfo="description">{description}</span>
+        </div>
+        <div class="body" data-postinfo="body">
+          <a class="image" data-postinfo="header" href="#"></a>
+          {body}
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="assets/js/libs/firebase-app.js"></script>
+    <script type="text/javascript" src="assets/js/libs/firebase-auth.js"></script>
+    <script type="text/javascript" src="assets/js/libs/firebase-firestore.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="text/javascript" src="assets/js/firebase.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
+</html>

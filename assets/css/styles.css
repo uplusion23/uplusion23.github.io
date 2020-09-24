@@ -1,0 +1,759 @@
+:root {
+  --background-color: 19, 24, 37;
+  --foreground-color: 41, 49, 64;
+  --accent-color: 122, 134, 221;
+  --red: 255, 119, 107;
+  --yellow: 250, 175, 106;
+  --color-primary: 240, 240, 240;
+  --color-secondary: 126, 126, 129;
+}
+
+::-webkit-scrollbar {width: 0.8rem;height: 0.5rem;}
+::-webkit-scrollbar-track {background: rgba(var(--color-primary), 0.1);}
+::-webkit-scrollbar-thumb {background: rgba(var(--accent-color), 0.7);}
+::-webkit-scrollbar-thumb:hover {background: rgba(var(--accent-color), 1);}
+::selection {background:rgb(var(--accent-color));}
+
+body, html {
+  background: rgb(var(--background-color));
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: rgb(var(--color-primary));
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+.container > .navigation {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0 1rem;
+  margin: 0;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 99;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.container > .navigation a {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 4rem;
+  line-height: 4rem;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(var(--color-secondary));
+  margin: 0 1rem;
+  padding: 0 1.5rem;
+  font-weight: 300;
+  font-size: 0.8rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.container > .navigation a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background: rgb(var(--accent-color));
+  box-shadow: 0px 3px 15px 3px rgb(var(--accent-color));
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.container > .navigation a.active {
+  color: rgb(var(--accent-color));
+}
+
+.container > .navigation a.active:before {
+  opacity: 0.7;
+}
+
+.container > .content {
+  display: block;
+  position: relative;
+  width: 100%;
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 0 10vw;
+}
+
+.container > .content > .intro {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container > .content > .intro > span.title {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-align: center;
+  color: rgb(var(--color-primary));
+}
+
+.container > .content > .intro > span.subtitle {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-top: 0.3rem;
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 200;
+  text-align: center;
+  color: rgb(var(--color-secondary));
+  opacity: 1;
+}
+
+.container > .content > .intro > .links {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  padding: 1rem 0;
+  margin: 1rem 0 0 0;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container > .content > .intro > .links a {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 0 1rem;
+  padding: 0 3rem;
+  border-radius: 2px;
+  color: rgb(var(--color-primary));
+  text-decoration: none;
+  border: 0.15rem solid rgb(var(--accent-color));
+  transition: all 0.2s ease;
+}
+
+.container > .content > .intro > .links a.primary {
+  background-color: rgb(var(--accent-color));
+}
+
+.container > .content > .intro > .links a:not(.primary):before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  transform: translateX(-50%);
+  opacity: 0.2;
+  background-color: rgb(var(--accent-color));
+  transition: all 0.22s ease;
+  z-index: -1;
+}
+
+.container > .content > .intro > .links a:not(.primary):hover:before {
+  width: 100%;
+}
+
+.container > .content > .card {
+  display: grid;
+  grid-template-rows: 1fr 1.25fr;
+  grid-template-areas:
+    'title desc desc'
+    'feature1 feature2 feature3';
+  grid-gap: 3rem;
+  row-gap: 2rem;
+  position: relative;
+  min-width: 300px;
+  width: 100%;
+  min-height: 400px;
+  height: 80vh;
+  margin: 10vh 0;
+  background: rgba(var(--foreground-color), 0.7);
+  backdrop-filter: blur(15px);
+  border-radius: 2px;
+  padding: 4rem;
+  box-sizing: border-box;
+}
+
+.container > .content > .card > h1 {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-weight: 500;
+  font-size: 2rem;
+  color: rgb(var(--color-primary));
+  grid-area: title;
+}
+
+.container > .content > .card > .desc {
+  grid-area: desc;
+}
+
+.container > .content > .card > .desc span {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: rgb(var(--color-secondary));
+}
+
+.container > .content > .card > .desc a {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 2rem 0 0 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: rgb(var(--accent-color));
+  transition: all 0.2s ease;
+}
+
+.container > .content > .card > .desc a:after {
+  content: '\0203A';
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.1em;
+  color: rgb(var(--color-secondary));
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.container > .content > .card > .desc a:hover {
+  padding-left: 1rem;
+}
+
+.container > .content > .card > .desc a:hover:after {
+  opacity: 1;
+}
+
+.container > .content > .card > .feature {
+  
+}
+
+.container > .content > .card > .feature .icon {
+  display: block;
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 0 1.5rem 0;
+  background: red;
+  color: rgb(var(--color-primary));
+}
+
+.container > .content > .card > .feature .icon::after {
+  content: attr(data-content);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.container > .content > .card > .feature .icon.red {
+  background-color: rgb(var(--red));
+}
+
+.container > .content > .card > .feature .icon.yellow {
+  background-color: rgb(var(--yellow));
+}
+
+.container > .content > .card > .feature .icon.accent {
+  background-color: rgb(var(--accent-color));
+}
+
+.container > .content > .card > .feature span {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.container > .content > .card > .feature span.description {
+  color: rgb(var(--color-secondary));
+  font-size: 0.9rem;
+}
+
+.container > .content > .carousel {
+  display: block;
+  position: relative;
+  width: calc(100% + 10vw);
+  height: calc(500px + 3rem);
+  padding: 4rem 0rem 1rem 0rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+.container > .content > .carousel .head {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 80vw;
+  height: 3rem;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.container > .content > .carousel .head h1 {
+  display: block;
+  position: relative;
+  margin: 0;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0;
+  font-size: 2rem;
+  color: rgb(var(--color-primary));
+  font-weight: 300;
+}
+
+.container > .content > .carousel .head .buttons {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 7rem;
+}
+
+.container > .content > .carousel .head .buttons a {
+  display: block;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2px;
+  float: left;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(var(--color-primary));
+  font-size: 2rem;
+  line-height: 3rem;
+  border: 1px solid rgb(var(--accent-color));
+  box-sizing: border-box;
+  transition: all 0.22s ease;
+}
+
+.container > .content > .carousel .head .buttons a:hover {
+  background: rgba(var(--accent-color), 0.2);
+}
+
+.container > .content > .carousel > .scroll {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: cacl(100% + 10vw);
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding: 0 0 1rem 0;
+}
+
+.container > .content > .carousel > .scroll .card {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 100%;
+  background: rgb(var(--foreground-color), 0.7);
+  backdrop-filter: blur(15px);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin-right: 2rem;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.container > .content > .carousel > .scroll .card::after {
+  /* Fix for padding */
+  content: "";
+  position: absolute;
+  left: 100%;
+  width: 2rem;
+  height: 1px;
+}
+
+.container > .content > .carousel > .scroll .card::before {
+  /* Fix for interior padding */
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 60%;
+}
+
+.container > .content > .carousel > .scroll .card .media {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+  background-color: rgba(var(--accent-color), 0.1);
+}
+
+.container > .content > .carousel > .scroll .card .title {
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  width: 100%;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin: 1rem 0 0 0;
+  color: rgb(var(--color-primary));
+}
+
+.container > .content > .carousel > .scroll .card .description {
+  display: block;
+  line-height: 0.95rem;
+  width: 100%;
+  font-weight: 300;
+  font-size: 0.85rem;
+  margin: 0;
+  color: rgba(var(--color-secondary), 0.9);
+  max-height: 65px;
+  overflow: hidden;
+}
+
+.container > .content > .carousel > .scroll .card .description:after {
+  content: '\02026';
+}
+
+.container > .content > .carousel > .scroll .card > a {
+  display: inline-block;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.85rem;
+  margin: 2rem 0 0 0;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  color: rgb(var(--color-primary));
+  background: rgb(var(--accent-color));
+  border-radius: 2px;
+}
+
+.container > .content > .text-seperator {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  line-height: 10vh;
+  margin: 5vh 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.container > .content > .social-media {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  line-height: 10vh;
+  padding: 0;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.container > .content > .social-media > a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  width: 4rem;
+  height: 4rem;
+  color: rgb(var(--color-secondary));
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 1rem;
+  transition: all 0.2s ease;
+}
+
+.container > .content > .social-media > a:hover {
+  color: rgb(var(--color-primary));
+}
+
+.container > .content > .social-media > a:after {
+  content: attr(data-tooltip);
+  display: block;
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 1.5rem;
+  font-size: 0.8rem;
+  color: rgb(var(--color-primary));
+  background: rgba(var(--foreground-color), 0.9);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.container > .content > .social-media > a:hover:after {
+  top: -1.5rem;
+  opacity: 1;
+}
+
+.animateOnLoad {
+  translate: translateY(20%);
+  opacity: 0;
+}
+
+.animateOnLoad.animate-active {
+  animation: loadAnimation 1s ease 1 forwards;
+}
+
+/* Background Styles */
+/* ******************************** */
+
+.splash {
+  display: block;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  z-index: 0;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 5vh;
+  border: 4px solid rgba(var(--accent-color), 0);
+  box-sizing: border-box;
+  animation: scaleInParent 3s ease 0s;
+}
+
+.splash:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  border-radius: 5vh;
+  background: rgb(var(--accent-color));
+  transform: translateY(-50%) scale(1);
+  opacity: 0;
+  animation: scaleIn 1s ease 0.6s;
+}
+
+.splash:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  border-radius: 5vh;
+  background: rgb(var(--accent-color));
+  transform: translateY(-50%) scale(1);
+  opacity: 0;
+  animation: scaleIn 1s ease .9s;
+}
+
+.cubes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cubes > .cube {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(var(--accent-color), 0.2);
+  animation: cubeAnimate 25s linear infinite;
+  bottom: -150px;
+  z-index: -1;
+  border-radius: 5%;
+}
+
+.cubes > .cube:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.cubes > .cube:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.cubes > .cube:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.cubes > .cube:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.cubes > .cube:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.cubes > .cube:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.cubes > .cube:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.cubes > .cube:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.cubes > .cube:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.cubes > .cube:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes scaleInParent {
+  0% {
+    transform: scale(0);
+    border: 4px solid rgba(var(--accent-color), 0.7);
+  }
+  40% {
+    border: 4px solid rgba(var(--accent-color), 0.5);
+    transform: scale(1);
+  }
+  45% {
+    border: 4px solid rgba(var(--accent-color), 0);
+  }
+  100% {
+    border: 4px solid rgba(var(--accent-color), 0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: translateY(-50%) scale(0);
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes cubeAnimate {
+  0%{
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes loadAnimation {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

@@ -1,125 +1,110 @@
-<!DOCTYPE Html>
-<!--
-
-TODO:
-    * Fix SVG for logo. Stroke offset and dash. Warp/recover periodically.
-
-ROADMAP:
-    * Post Creator [Most likely offline, or a simple page to generate JSON]
-    * Post Editor [It'd have to be offline unless I move to something like firebase]
-    * Some sort of markup/down formatting.
-
--->
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="uplusion23 (Trevor McIntire)">
-    <meta name="description" content="Personal portfolio and misc website for uplusion23 (Trevor McIntire)">
-    <title>uplusion23</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <title>Portfolio - Trevor McIntire</title>
+    <link href="assets/icons/ionicons.min.css" rel="stylesheet" type="text/css" >
+    <link href="assets/fonts/montserrat.css" rel="stylesheet" type="text/css" >
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css" >
   </head>
   <body>
-    <div class="nav">
-      <a class="logo" href="#">
-        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="143 113 395 455" width="390" height="450">
-          <defs>
-            <path d="M242.5 115L242.5 430L291.25 475L388.75 475L437.5 430L437.5 340L535 340L535 475L437.5 565L242.5 565L145 475L145 115L242.5 115Z" id="a1LLCgUfSL"></path>
-            <path d="M437.5 115L535 115L535 295L437.5 295L437.5 115Z" id="e1tQCe29hj"></path>
-          </defs>
-          <g>
-            <g>
-              <g>
-                <use xlink:href="#a1LLCgUfSL" opacity="1" fill-opacity="0" stroke="#ffffff" stroke-width="20" stroke-opacity="1"></use>
-              </g>
-            </g>
-            <g>
-              <g>
-                <use xlink:href="#e1tQCe29hj" opacity="1" fill-opacity="0" stroke="#ffffff" stroke-width="20" stroke-opacity="1"></use>
-              </g>
-            </g>
-          </g>
-        </svg>
-      </a>
-      <a class="menu" href="#"><ion-icon name="menu"></ion-icon></a>
+    <div class="cubes">
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
     </div>
     <div class="container">
-      <div class="intro">
-        <h1>Hello, I'm <span>Trevor McIntire</span></h1>
-        <p class="bio">
-          Web and Software developer working in the Information Technology field for the U.S. DoD who is constantly searching to expand my knowledge. I primarily develop in NodeJS and web-based languages such as CSS/JavaScript for both work and hobby. I started programming at the age of 14, when my love for gaming met my love for modding. Check out my posts, or look around at a few of my personal projects.
-        </p>
-        <span class="social-media">
-          <a href="https://twitter.com/uplusion23" target="_blank"><ion-icon name="logo-twitter"></ion-icon> Twitter</a>
-          <a href="https://github.com/uplusion23/" target="_blank"><ion-icon name="logo-github"></ion-icon> GitHub</a>
-          <a href="mailto:uplusion23@gmail.com" target="_blank"><ion-icon name="mail"></ion-icon> Email</a>
-        </span>
+      <div class="navigation">
+        <a href="#intro" data-nav="intro" class="active">Intro</a>
+        <a href="#about" data-nav="about">About</a>
+        <a href="#works" data-nav="works">Works</a>
+        <a href="#contact" data-nav="contact">Contact</a>
       </div>
-      <div class="posts">
-        <h1>Programs</h1>
-        <div class='icon-scroll'></div>
-        <div class="list">
-          <div class="post wide" style="background-image: url(assets/img/Apex-Library.jpg)" data-link="https://github.com/uplusion23/Apex-Library">
-            <span class="description">
-              <span class="category">Software</span>
-              An open-source PC game consolidator. Takes your libraries from multiple clients and mergest them.
-            </span>
-            <span class="title">
-              <span>Apex Library</span>
-            </span>
-          </div>
-          <div class="post" style="background-image: url(assets/img/Sentinel.png)" data-link="https://github.com/uplusion23/Sentinel">
-            <span class="description">
-              <span class="category">Software</span>
-              An open-source Dungeons & Dragons "All-In-One" client.
-            </span>
-            <span class="title">
-              <span>Sentinel</span>
-            </span>
-          </div>
-          <div class="post" style="background-image: url(assets/img/Music-App.png)" data-link="https://github.com/uplusion23/music-app">
-            <span class="description">
-              <span class="category">Software</span>
-              An incomplete music application running on NW.JS. The project was discontinued.
-            </span>
-            <span class="title">
-              <span>Unnamed Music Application</span>
-            </span>
+      <div class="content">
+        <div class="intro" id="intro">
+          <span class="title animateOnLoad" style="animation-delay: 0.2s;">Trevor McIntire,</span>
+          <span class="title animateOnLoad" style="animation-delay: 0.2s;">Front-End Web Developer and Designer.</span>
+          <span class="subtitle animateOnLoad" style="animation-delay: 0.2s;">Over 8 years of personal and freelance experience</span>
+          <div class="links">
+            <a href="mailto:uplusion23+portfolio@gmail.com" class="primary animateOnLoad" style="animation-delay: 0.4s;">Contact Me</a>
+            <a href="#" class="animateOnLoad" style="animation-delay: 0.5s;">Download Resume</a>
           </div>
         </div>
-      </div>
-      <div class="posts">
-        <h1>Updates</h1>
-        <div class='icon-scroll'></div>
-        <div class="list" data-list="updates"></div>
+        <div class="card animateOnLoad" id="about" style="animation-delay: 0.2s;">
+          <h1>Why hire me to work for you?</h1>
+          <div class="desc">
+            <span>With over 8 years of personal and freelance experience in both Software and Web Development, I not only constantly improve and harden my skillset, but I'm always reaching out to learn new capabilities.</span>
+            <a href="#">uplusion23@gmail.com</a>
+          </div>
+          <div class="feature">
+            <div class="icon red" data-content="&angrtvb;"></div>
+            <span class="title">Design Experience</span>
+            <span class="description">I've made the designs for most of my websites, but pulled inspiration from various sources. I'm excellent at following design guidelines.</span>
+          </div>
+          <div class="feature">
+            <div class="icon accent" data-content="&imof;"></div>
+            <span class="title">Development Experience</span>
+            <span class="description">I've worked with many languages and frameworks, along with multiple personal and freelance projects.</span>
+          </div>
+          <div class="feature">
+            <div class="icon yellow" data-content="&RuleDelayed;"></div>
+            <span class="title">Enthusiastic</span>
+            <span class="description">Development and Design isn't just a job to me, it's a passion and a hobby. I work on every project with the same ambition as if it were my own.</span>
+          </div>
+        </div>
+        <span class="text-seperator">What I've Done</span>
+        <div class="carousel" id="works">
+          <div class="head">
+            <h1>
+            Projects</h2>
+            <div class="buttons">
+              <a href="#"><i class="ion ion-android-arrow-back"></i></a>
+              <a href="#"><i class="ion ion-android-arrow-forward"></i></a>
+            </div>
+          </div>
+          <div class="scroll">
+            <div class="card animateOnLoad" style="animation-delay: 0.2s;">
+              <div class="media" style="background-image: url('https://assets.codepen.io/237115/internal/screenshots/pens/yzBbXj.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1506215756&width=960');"></div>
+              <span class="title">Admin Panel</span>
+              <span class="description">A small administrative panel design from my early days of learning web development</span>
+              <a href="https://codepen.io/uplusion23/pen/yzBbXj" target="_blank">CodePen</a>
+            </div>
+            <div class="card animateOnLoad" style="animation-delay: 0.4s;">
+              <div class="media" style="background-image: url('https://camo.githubusercontent.com/7718b3b16305add0dbd1da8dcc179bac7f11cbff/687474703a2f2f69332e7974696d672e636f6d2f76692f544b703775715170654a302f6d617872657364656661756c742e6a7067');"></div>
+              <span class="title">Apex Library</span>
+              <span class="description">A lightweight, beautiful game library consolidator and launcher built on NodeJS and Node-Webkit</span>
+              <a href="https://github.com/uplusion23/Apex-Library" target="_blank">Read More</a>
+            </div>
+            <div class="card animateOnLoad" style="animation-delay: 0.6s;">
+              <div class="media" style="background-image: url('https://camo.githubusercontent.com/9d1de634d353ba7fdebc0a9dfc4b156c22f19cf4/68747470733a2f2f692e696d6775722e636f6d2f396632435969322e706e67');"></div>
+              <span class="title">Sentinel</span>
+              <span class="description">Sentinel is a small project to bring the experience of online DnD tools into one package that works seamlessly together</span>
+              <a href="https://github.com/uplusion23/Sentinel" target="_blank">Read More</a>
+            </div>
+            <div class="card animateOnLoad" style="animation-delay: 0.8s;">
+              <div class="media" style="background-image: url('https://assets.codepen.io/237115/internal/screenshots/pens/zorOav.default.png?fit=cover&format=auto&ha=false&height=360&quality=75&v=2&version=1478811557&width=640');"></div>
+              <span class="title">Material Card</span>
+              <span class="description">Material Design Card animation inspired from Google's original Material Design Guidelines</span>
+              <a href="https://codepen.io/uplusion23/pen/zorOav" target="_blank">CodePen</a>
+            </div>
+          </div>
+        </div>
+        <span class="text-seperator" id="contact">Contact Me</span>
+        <div class="social-media">
+          <a class="animateOnLoad" style="animation-delay: 0.2s;" href="https://github.com/uplusion23/" target="_blank" data-tooltip="GitHub"><i class="ion ion-social-github"></i></a>
+          <a class="animateOnLoad" style="animation-delay: 0.4s;" href="https://www.linkedin.com/in/TrevorMcIntire/" target="_blank" data-tooltip="LinkedIn"><i class="ion ion-social-linkedin"></i></a>
+          <a class="animateOnLoad" style="animation-delay: 0.6s;" href="https://codepen.io/uplusion23" target="_blank" data-tooltip="CodePen"><i class="ion ion-social-codepen"></i></a>
+          <a class="animateOnLoad" style="animation-delay: 0.8s;" href="mailto:uplusion23+portfolio@gmail.com" target="_blank" data-tooltip="Email"><i class="ion ion-email"></i></a>
+        </div>
       </div>
     </div>
-    <div class="post-popup">
-      <div class="dialog">
-        <span class="close" data-dialog="close"><ion-icon name="close"></ion-icon></span>
-        <div class="head">
-          <div class="before" data-postinfo="header"></div>
-          <div class="category">
-            <span data-postinfo="category">category</span>
-          </div>
-          <span class="date" data-postinfo="date">{date}</span>
-          <h1 data-postinfo="title">{title}</h1>
-          <span class="description" data-postinfo="description">{description}</span>
-        </div>
-        <div class="body" data-postinfo="body">
-          <a class="image" data-postinfo="header" href="#"></a>
-          {body}
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript" src="assets/js/libs/firebase-app.js"></script>
-    <script type="text/javascript" src="assets/js/libs/firebase-auth.js"></script>
-    <script type="text/javascript" src="assets/js/libs/firebase-firestore.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <script type="text/javascript" src="assets/js/firebase.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/scripts.js"></script>
   </body>
 </html>
